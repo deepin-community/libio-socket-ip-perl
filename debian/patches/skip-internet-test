@@ -1,0 +1,22 @@
+From: Dominique Dumont <dod@debian.org>
+Date: Tue, 2 Jun 2020 20:55:52 +0100
+Subject: Skip internet test
+
+Forwarded: not-needed
+
+skip test that connects to internet
+---
+ t/31nonblocking-connect-internet.t | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+--- a/t/31nonblocking-connect-internet.t
++++ b/t/31nonblocking-connect-internet.t
+@@ -4,7 +4,7 @@
+ use strict;
+ use warnings;
+ 
+-use Test::More;
++use Test::More skip_all => 'cannot connect to internet with Debian build systems';
+ 
+ use IO::Socket::IP;
+ 

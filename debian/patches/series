@@ -1,0 +1,2 @@
+skip-internet-test
+0001-Disable-getaddrinfo-3-AI_ADDRCONFIG-for-localhost-an.patch
